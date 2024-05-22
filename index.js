@@ -12,12 +12,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Conectar Mongo
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/acortadorUrl', {
-    useNewUrlParser: true
+mongoose.connect('mongodb://jhonhuertamz:hlKLnNUYJTDdAqpN@ac-fpd42sg-shard-00-00.b61g9ls.mongodb.net:27017,ac-fpd42sg-shard-00-01.b61g9ls.mongodb.net:27017,ac-fpd42sg-shard-00-02.b61g9ls.mongodb.net:27017/acortadorUrl', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+    authSource: 'admin',
+    replicaSet: 'atlas-11j7ph-shard-0'
 })
+.then(() => {
+    console.log("Conexión a MongoDB establecida correctamente");
+})
+.catch((error) => {
+    console.error("Error al conectar a MongoDB:", error);
+});
 
 // Habilitar pug
 app.set('view engine', 'pug');
+
 
 // Carpeta para las vistas
 app.set('views', path.join(__dirname, './views'));

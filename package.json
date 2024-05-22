@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon ./index.js "
   },
-  "author": "Juan De la torre",
+  "author": "Jhon Huerta",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.19.1"
@@ -20,6 +20,7 @@
     "pug": "^2.0.4",
     "session": "^0.1.0",
     "shortid": "^2.2.14",
-    "slug": "^1.1.0"
+    "slug": "^1.1.0",
+    "valid-url": "^1.0.9"
   }
 }

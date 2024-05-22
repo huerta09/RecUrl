@@ -5,17 +5,15 @@ const shortid = require('shortid');
 const urlSchema = new Schema({
     urlOriginal: {
         type: String,
-        lowercase: true,
-        trim: true,
-        required: 'Agrega una URL'
+        required: true
     }, 
     urlCorta: {
         type: String
     }
 });
-// Métodos de mongoose
-urlSchema.pre('save', async function(next) {
-    // generar la URL corta
+
+urlSchema.pre('save', function(next) {
+    // Generar la URL corta antes de guardar
     this.urlCorta = shortid.generate();
     next();
 });
