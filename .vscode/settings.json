@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/1fb4bf16-794a-4add-b86d-bcb623c490e4/resourceGroups/webAplicationDemo-rg/providers/Microsoft.Web/sites/AcortadorUrlDemo",
-    "appService.deploySubpath": "."
-}
