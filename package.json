@@ -4,6 +4,7 @@
   "description": "Acortador URL's con Express y Mongoose",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config ./index.js",
     "start": "nodemon ./index.js "
   },
   "author": "Jhon Huerta",
